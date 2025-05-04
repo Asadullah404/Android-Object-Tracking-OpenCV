@@ -27,11 +27,11 @@ jobs:
     - name: Build APK
       run: ./gradlew :ObjectTrackingCamera:assembleDebug
 
-    - name: List APKs
+    - name: List APKs (for debugging)
       run: ls -R ObjectTrackingCamera/build/outputs/apk
 
     - name: Upload APK
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v1
       with:
         name: ObjectTrackingCamera-debug-apk
         path: ObjectTrackingCamera/build/outputs/apk/debug/*.apk
